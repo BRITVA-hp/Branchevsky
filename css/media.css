@@ -1,8 +1,12 @@
 @media (max-width: 1650px) {
 
+  /* other */
+
   .section__title {
     font-size: 50px;
   }
+
+  /* advantages */
 
   .advantages__description {
     font-size: 17px;
@@ -22,11 +26,15 @@
     width: 90%;
     margin: auto;}
 
+  /* opticss */
+
   .opticss__card-title {
     font-size: 30px;
   }
 }
 @media (max-width: 1550px) {
+
+  /* opticss */
   .opticss__card--last-img {
     width: 22%;
     left: -70px;
@@ -62,6 +70,8 @@
 }
 
 @media (max-width: 1350px) {
+
+  /* advantages */
   .advantages__img::after {
     width: 15px;
     right: -15px;
@@ -84,7 +94,6 @@
   
   .advantages__description {
     font-size: 15px;
-    /* max-width: 110px; */
   }
   .advantages__number {
     font-size: 40px;
@@ -95,6 +104,8 @@
   .advantages__img--bot {
     max-width: 50%;
   }
+
+  /* diagnostics */
   .diagnostics__title {
     font-size: 25px;
     margin-bottom: 20px;
@@ -106,12 +117,6 @@
   .diagnostics__button {
     font-size: 15px;
     padding: 15px;
-  }
-  .advantages__container {
-    margin-bottom: 150px;
-  }
-  .advantages__img--glasses {
-    margin-right: 0;
   }
   .diagnostics__description--glasses-top, .diagnostics__description--glasses, .diagnostics__description--down {
     font-size: 15px;
@@ -125,6 +130,14 @@
   .diagnostics__description--glasses-top{
     margin-bottom: 35px;
   }
+
+  /* advantages */
+  .advantages__container {
+    margin-bottom: 150px;
+  }
+  .advantages__img--glasses {
+    margin-right: 0;
+  }
   .advantages__img--glasses {
     margin-left: 100px;
   }
@@ -135,6 +148,8 @@
   .advantages__number {
     font-size: 30px;
   }
+
+  /* opticss */
   .opticss__card--last-img {
     display: none;
   }
@@ -150,6 +165,7 @@
 }
 
 @media (max-width: 1200px) {
+  /* opticss */
   .opticss__card--last-text {
     max-width: 370px;
   }
@@ -172,35 +188,17 @@
 }
 
 @media (max-width: 992px) {
-
-  .diagnostics__button:hover {
-    transition: 0.3s;
-    color: #E7383E;
-    background-color: transparent;
-  }
-  .diagnostics__button {
-    font-size: 11px;
-    padding: 5px 15px;
-  }
+  
+  /* advantages */
   .advantages__row {
     width: 60%;
     flex-wrap: wrap;
   }
   .advantages__description {
     font-size: 15px;
-    /* max-width: 110px; */
   }
   .advantages__number {
     font-size: 40px;
-  }
-  .diagnostics__title {
-    line-height: 29px;
-  }
-  .diagnostics__description {
-    margin-bottom: 20px;
-    font-size: 10px;
-    max-width: 300px;
-    line-height: 18px;
   }
   .advantages__img{
     width: 380px;
@@ -210,10 +208,6 @@
   .advantages__card:not(.advantages__card--last)::after {
     display: none;
   }
-  /* .advantages__img--bot {
-    max-width: 35%;
-  } */
-
   .advantages__img::after {
     width: 10px;
     right: -10px;
@@ -235,6 +229,27 @@
   .advantages__img--glasses {
     margin-right: 0;
   }
+
+  /* diagnostics */
+  .diagnostics__button:hover {
+    transition: 0.3s;
+    color: #E7383E;
+    background-color: transparent;
+  }
+  .diagnostics__button {
+    font-size: 11px;
+    padding: 5px 15px;
+  }
+  .diagnostics__title {
+    line-height: 29px;
+  }
+  .diagnostics__description {
+    margin-bottom: 20px;
+    font-size: 10px;
+    max-width: 300px;
+    line-height: 18px;
+  }
+  /* opticss */
   .opticss__img-box::before {
     top: 0;
     left: -10px;
@@ -254,6 +269,8 @@
 }
 
 @media (max-width: 767px) {
+
+  /* advantages */
   .advantages__img {
     margin: auto;
   }
@@ -273,24 +290,6 @@
   .advantages__main {
     flex-direction: column;
     position: relative;
-    /* align-items: center; */
-  }
-  .diagnostics {
-    margin: auto;
-  }
-  .diagnostics__description {
-    font-size: 16px;
-    max-width: 500px;
-  }
-  .diagnostics__title {
-    line-height: 44px;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 300;
-    max-width: 335px;
-    position: absolute;
-    left: 25%;
-    top: -110px;
   }
   .advantages__container {
     margin-bottom: 180px;
@@ -316,12 +315,6 @@
     width: 100%;
     margin-bottom: 50px;
   }
-  .diagnostics__button {
-    font-size: 16px;
-    padding: 20px 15px;
-    margin: auto;
-    display: block;
-  }
   .advantages__main--glasses > .diagnostics {
     order: 1;
   }
@@ -334,9 +327,36 @@
     left: auto;
     right: 25%;
   }
+
+  /* diagnostics */
+  .diagnostics {
+    margin: auto;
+  }
+  .diagnostics__description {
+    font-size: 16px;
+    max-width: 500px;
+  }
+  .diagnostics__title {
+    line-height: 44px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    max-width: 335px;
+    position: absolute;
+    left: 25%;
+    top: -110px;
+  }
+  .diagnostics__button {
+    font-size: 16px;
+    padding: 20px 15px;
+    margin: auto;
+    display: block;
+  }
   .advantages__box--box-lenses {
     padding-top: 65px;
   }
+
+  /* opticss */
   .opticss__row {
     flex-direction: column;
     align-items: center;
@@ -376,12 +396,16 @@
   }
 }
 @media (max-width: 576px) {
-  .advantages__row {
-    flex-direction: column;
-  }
+
+  /* other */
   .section__title {
     font-size: 32px;
     line-height: 44px;
+  }
+
+  /* advantages */
+  .advantages__row {
+    flex-direction: column;
   }
   .advantages__number {
     font-size: 72px;
@@ -409,6 +433,17 @@
     top: -18%;
     z-index: -1;
   }
+  .advantages__img--glasses > .advantages__img--bott {
+    left: -1.5%;
+  }
+  .advantages__img--glasses {
+    transform: translateX(1%);
+  }
+  .advantages__box--box-glasses {
+    margin-bottom: 100px;
+  }
+
+  /* diagnostics */
   .diagnostics {
     padding: 0 12px 0 15px;
   }
@@ -421,14 +456,8 @@
   .diagnostics__button {
     width: 100%;
   }
-  .advantages__img--glasses > .advantages__img--bott {
-    left: -1.5%;
-  }
   .diagnostics--glasses {
     padding-left: 0;
-  }
-  .advantages__img--glasses {
-    transform: translateX(1%);
   }
   .diagnostics__description--down {
     margin-left: 0;
@@ -436,9 +465,6 @@
   .diagnostics__title--glasses {
     left: auto;
     right: 1%;
-  }
-  .advantages__box--box-glasses {
-    margin-bottom: 100px;
   }
   .diagnostics__description--down {
     font-size: 15px;
