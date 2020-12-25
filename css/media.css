@@ -185,6 +185,53 @@
   .opticss__card--last-text {
     margin-bottom: 35px;
   }
+
+  /* stock */
+  .stock__card {
+    margin-top: 0;
+    margin-right: 25px;
+    padding-top: 240px;
+  }
+  .stock__card-title {
+    font-size: 50px;
+    right: -80px;
+    top: 70px;
+  }
+  .stock__card-text {
+    font-size: 20px;
+    margin-bottom: 70px;
+  }
+  .stock__card-counter {
+    font-size: 24px;
+  }
+  .stock__card-arrow {
+    width: 40px;
+  }
+  .stock__card-arrow--right {
+    margin-bottom: 25px;
+  }
+  .stock__slider-card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .stock__slider-card-sell {
+    font-size: 18px;
+  }
+  .stock__slider-card-wrap {
+    padding: 0 25px 0;
+  }
+  .stock__slider-card-box {
+    padding: 0 25px 30px;
+  }
+  .stock__slider-card-text, .stock__slider-card-link, .stock__slider-card-button {
+    font-size: 16px;
+  }
+  .stock__slider-card--box {
+    height: 640px;
+    width: 330px;
+  }
+  .slick-slide>div {
+   padding: 20px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -393,6 +440,64 @@
   }
   .opticss__img {
     margin-bottom: 40px;
+  }
+
+  /* stock */
+  .stock__slider-main {
+    display: none;
+  }
+  .stock__slider-media {
+    display: block;
+  }
+  .stock__card-counter {
+    display: none;
+  }
+  .stock__card-arrow {
+    display: none;
+  }
+  .stock__card-title {
+    position: static;
+    transform: none;
+    font-size: 36px;
+  }
+  .stock__row {
+    flex-direction: column;
+  }
+  .stock__card {
+    align-items: flex-start;
+    padding: 0;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .stock__card-text {
+    text-align: left;
+    font-size: 14px;
+    max-width: 293px;
+    margin: 0;
+    line-height: 17px;
+  }
+  .stock__slider-card--box {
+    width: 245px;
+    /* height: auto; */
+  }
+  .stock__slider-card-img img {
+    margin-bottom: 25px;
+  }
+  .stock__slider-card-sell {
+    width: auto;
+    line-height: 22px;
+  }
+  .stock__slider-card--box {
+    height: 390px;
+  }
+  .stock--block {
+    padding-left: 0;
+  }
+  .slick-slide>div {
+    padding: 10px;
+  }
+  .stock__slider-card-link {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 576px) {
