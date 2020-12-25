@@ -60,17 +60,21 @@ window.addEventListener('DOMContentLoaded', () => {
             content.innerHTML = text;
           }
         });
+        
         modal.classList.add(visibleClass);
       });
     });
+
     close.addEventListener('click', () => {
       modal.classList.remove(visibleClass);
     });
+
     modal.addEventListener('click', e => {
       if (e.target == modal) {
         modal.classList.remove(visibleClass);
       }
     });
+
     document.addEventListener('keydown', e => {
       if (e.key == "Escape") {
         modal.classList.remove(visibleClass);

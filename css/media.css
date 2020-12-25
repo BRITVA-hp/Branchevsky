@@ -584,3 +584,9 @@
     margin-bottom: 50px;
   }
 }
+@media screen and ( max-height: 600px  ) {
+  .stock__modal-mobile {
+    overflow: auto;
+    align-items: flex-start;
+  }
+}
