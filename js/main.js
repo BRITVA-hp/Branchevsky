@@ -6,9 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
         triggerModalMain = document.querySelectorAll('.stock__slider-main a'),
         triggerModalMobile = document.querySelectorAll('.stock__slider-media a'),
         stockModalMain = document.querySelector('.stock__modal-main'),
-        stockModalMobile = document.querySelector('.stock__modal-mobile'),
-        modalContentMain = stockModalMain.querySelector('.stock__modal-text'),
-        modalContentMobile = stockModalMobile.querySelector('.stock__modal-text');
+        stockModalMobile = document.querySelector('.stock__modal-mobile');
 
   total.textContent = slide.length;
 
