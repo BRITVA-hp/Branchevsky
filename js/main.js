@@ -2,52 +2,95 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const countSlide = document.querySelector('.stock__card-counter--active'),
         slide = document.querySelectorAll('.stock__slider-card1'),
-        total = document.querySelector('.stock__card-counter--all');
+        total = document.querySelector('.stock__card-counter--all'),
+        triggerModalMain = document.querySelectorAll('.stock__slider-main a'),
+        triggerModalMobile = document.querySelectorAll('.stock__slider-media a'),
+        stockModalMain = document.querySelector('.stock__modal-main'),
+        stockModalMobile = document.querySelector('.stock__modal-mobile'),
+        modalContentMain = stockModalMain.querySelector('.stock__modal-text'),
+        modalContentMobile = stockModalMobile.querySelector('.stock__modal-text');
 
-    total.textContent = slide.length;
+  total.textContent = slide.length;
+
   $('.variable-width').slick({
     prevArrow: $('.stock__card-arrow--right'),
     nextArrow: $('.stock__card-arrow--left'),
     dots: false,
     arrows : false,
-    infinite: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    centerMode: false,
+    variableWidth: true
+  });
+  
+  $('.stock__card-arrow--left').on('click', function() {
+  $('.variable-width').slick('slickPrev');
+  });
+
+  $('.stock__card-arrow--right').on('click', function() {
+  $('.variable-width').slick('slickNext');
+  });
+
+  $('.variable-width').on('afterChange', function(event, slick, currentSlide, nextSlide){ //счётчик слайдов
+    countSlide.innerText = currentSlide + 1;
+  });
+
+  $('.variable-width1').slick({
+    dots: true,
+    arrows : false,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     centerMode: false,
     variableWidth: true
     });
   
-    $('.stock__card-arrow--left').on('click', function() {
-    $('.variable-width').slick('slickPrev');
-    });
+  function addContent() {
+
+  }
   
-    $('.stock__card-arrow--right').on('click', function() {
-    $('.variable-width').slick('slickNext');
-    });
-
-    $('.variable-width').on('afterChange', function(event, slick, currentSlide, nextSlide){ //счётчик слайдов
-      countSlide.innerText = currentSlide + 1;
-    });
-
-    $('.variable-width1').slick({
-      dots: true,
-      arrows : false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      centerMode: false,
-      variableWidth: true
+  function openModal(triggers, modal, visibleClass) {
+    const close = modal.querySelector('.stock__modal-close'),
+          content = modal.querySelector('.stock__modal-text');
+          
+    triggers.forEach((trigger, i) => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        arrayContent.forEach((text, y) => {
+          if (i == y) {
+            content.innerHTML = text;
+          }
+        });
+        modal.classList.add(visibleClass);
       });
-  // const dots = document.querySelector('.variable-width1 .slick-dots');
-
-  // console.log(dots);
-
-  // dots.style.cssText = `margin-left: ${screen.width/2}px; transform: translateX(-50%)`;
-
-  // window.addEventListener(`resize`, event => {
-  //   dots.style.cssText = `margin-left: ${screen.width/2}px; transform: translateX(-50%)`;
-  // }, false);
+    });
+    close.addEventListener('click', () => {
+      modal.classList.remove(visibleClass);
+    });
+    modal.addEventListener('click', e => {
+      if (e.target == modal) {
+        modal.classList.remove(visibleClass);
+      }
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key == "Escape") {
+        modal.classList.remove(visibleClass);
+      }
+    });
+  }
   
+  openModal(triggerModalMain, stockModalMain, 'stock__modal--visible');
+  openModal(triggerModalMobile, stockModalMobile, 'stock__modal--visible');
+
+  const arrayContent = [
+    "Хорошие солнцезащитные очки – аксессуар первостепенной важности, они необходимы нашим глазам. </br></br> При выборе солнцезащитных очков не стоит забывать о главной их функции – защита от солнца. Болезни, которые вызывает вредное излучение, действительно серьезные: катаракта, ожег роговицы, злокачественные заболеваниями кожи век и конъюнктивы. </br></br> Что бы избежать данных сложнений, нужно выбирать качественную оптику.",
+    "1Хорошие солнцезащитные очки – аксессуар первостепенной важности, они необходимы нашим глазам. </br></br> При выборе солнцезащитных очков не стоит забывать о главной их функции – защита от солнца. Болезни, которые вызывает вредное излучение, действительно серьезные: катаракта, ожег роговицы, злокачественные заболеваниями кожи век и конъюнктивы. </br></br> Что бы избежать данных сложнений, нужно выбирать качественную оптику.",
+    "2Хорошие солнцезащитные очки – аксессуар первостепенной важности, они необходимы нашим глазам. </br></br> При выборе солнцезащитных очков не стоит забывать о главной их функции – защита от солнца. Болезни, которые вызывает вредное излучение, действительно серьезные: катаракта, ожег роговицы, злокачественные заболеваниями кожи век и конъюнктивы. </br></br> Что бы избежать данных сложнений, нужно выбирать качественную оптику.",
+    "3Хорошие солнцезащитные очки – аксессуар первостепенной важности, они необходимы нашим глазам. </br></br> При выборе солнцезащитных очков не стоит забывать о главной их функции – защита от солнца. Болезни, которые вызывает вредное излучение, действительно серьезные: катаракта, ожег роговицы, злокачественные заболеваниями кожи век и конъюнктивы. </br></br> Что бы избежать данных сложнений, нужно выбирать качественную оптику.",
+    "4Хорошие солнцезащитные очки – аксессуар первостепенной важности, они необходимы нашим глазам. </br></br> При выборе солнцезащитных очков не стоит забывать о главной их функции – защита от солнца. Болезни, которые вызывает вредное излучение, действительно серьезные: катаракта, ожег роговицы, злокачественные заболеваниями кожи век и конъюнктивы. </br></br> Что бы избежать данных сложнений, нужно выбирать качественную оптику.",
+    "5Хорошие солнцезащитные очки – аксессуар первостепенной важности, они необходимы нашим глазам. </br></br> При выборе солнцезащитных очков не стоит забывать о главной их функции – защита от солнца. Болезни, которые вызывает вредное излучение, действительно серьезные: катаракта, ожег роговицы, злокачественные заболеваниями кожи век и конъюнктивы. </br></br> Что бы избежать данных сложнений, нужно выбирать качественную оптику."
+  ];
 
   // const sliderBox = document.querySelector('.stock__slider'),
   //       sliderWrapper = document.querySelector('.stock__slider-wrap'),
